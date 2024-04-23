@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6047642BD8209100B773CE /* MySampleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6047632BD8209100B773CE /* MySampleLabel.swift */; };
 		2A7FEA192BD8169300A046ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FEA182BD8169300A046ED /* AppDelegate.swift */; };
 		2A7FEA1B2BD8169300A046ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FEA1A2BD8169300A046ED /* SceneDelegate.swift */; };
 		2A7FEA1D2BD8169300A046ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FEA1C2BD8169300A046ED /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A6047632BD8209100B773CE /* MySampleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySampleLabel.swift; sourceTree = "<group>"; };
 		2A7FEA152BD8169300A046ED /* SwiftUIkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7FEA182BD8169300A046ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7FEA1A2BD8169300A046ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				2A7FEA182BD8169300A046ED /* AppDelegate.swift */,
 				2A7FEA1A2BD8169300A046ED /* SceneDelegate.swift */,
 				2A7FEA1C2BD8169300A046ED /* ViewController.swift */,
+				2A6047632BD8209100B773CE /* MySampleLabel.swift */,
 				2A7FEA1E2BD8169300A046ED /* Main.storyboard */,
 				2A7FEA212BD8169400A046ED /* Assets.xcassets */,
 				2A7FEA232BD8169400A046ED /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				2A7FEA1D2BD8169300A046ED /* ViewController.swift in Sources */,
 				2A7FEA192BD8169300A046ED /* AppDelegate.swift in Sources */,
+				2A6047642BD8209100B773CE /* MySampleLabel.swift in Sources */,
 				2A7FEA1B2BD8169300A046ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
