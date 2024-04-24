@@ -9,12 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var titlelabel: UILabel!
+    @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cofigureTitleLabel()
         cofigureMyImageView()
+        cofigureMyButton()
     }
     
     private func cofigureTitleLabel() {
@@ -27,6 +29,12 @@ class ViewController: UIViewController {
     private func cofigureMyImageView() {
         myImageView.image = UIImage(named: "myImage")
         myImageView.contentMode = .scaleAspectFit
+    }
+    
+    private func cofigureMyButton() {
+        myButton.setTitle("내 버튼", for: .normal)
+        myButton.isEnabled = false
+        myButton.setTitle("내 버튼 클릭!", for: .disabled)
     }
     
     @IBAction func didTabCloseButton(_ sender: UIButton) {
