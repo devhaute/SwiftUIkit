@@ -8,38 +8,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var titlelabel: UILabel!
-    @IBOutlet weak var myButton: UIButton!
-    @IBOutlet weak var myImageView: UIImageView!
+    var datas: [String] = ["일찬호", "이찬호", "삼찬호", "사찬호"]
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cofigureTitleLabel()
-        cofigureMyImageView()
-        cofigureMyButton()
+        tableView.dataSource = self
     }
     
-    private func cofigureTitleLabel() {
-        titlelabel.text = "hello world"
-        titlelabel.textColor = .purple
-        titlelabel.font = .italicSystemFont(ofSize: 25)
-        titlelabel.sizeToFit()
-    }
-    
-    private func cofigureMyImageView() {
-        myImageView.image = UIImage(named: "myImage")
-        myImageView.contentMode = .scaleAspectFit
-    }
-    
-    private func cofigureMyButton() {
-        myButton.setTitle("내 버튼", for: .normal)
-        myButton.isEnabled = false
-        myButton.setTitle("내 버튼 클릭!", for: .disabled)
-    }
-    
-    @IBAction func didTabCloseButton(_ sender: UIButton) {
-        titlelabel.text = "헬로 월드"
-        print("didTapButton")
+    @IBAction func didTabButton(_ sender: Any) {
+        guard let text = nameTextField.text, !text.isEmpty else { return }
+        datas.append(text)
+        nameTextField.text = ""
+        tableView.reloadData()
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        datas.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "tableViewCell")
+        
+        cell.textLabel?.text = datas[indexPath.row]
+        return cell
+    }
+}
